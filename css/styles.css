@@ -1,0 +1,74 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fffaf4;
+    color: #333;
+}
+
+.text-gold {
+    color: #b69117;
+}
+
+.navbar-brand {
+    color: #b69117 !important;
+    font-weight: bold;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-title, .card-text {
+    text-align: center;
+}
+
+.btn {
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #eaeaea;
+}
+
+.footer-brand {
+    color: #b69117;
+    font-weight: bold;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.footer-links a {
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #b69117;
+}
+
+.social-links a {
+    color: #555;
+    margin: 0 8px;
+    font-size: 1.2rem;
+}
+
+.social-links a:hover {
+    color: #b69117;
+}
