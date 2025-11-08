@@ -1,28 +1,6 @@
 /* سبک‌های کوچک اضافی */
-
-body {
-  background: #f8f9fa;
-}
-
-.hero {
-  background: linear-gradient(135deg, #ffffff 0%, #f1f5ff 100%);
-  border-radius: .75rem;
-}
-
-.food-card img {
-  height: 160px;
-  object-fit: cover;
-  border-top-left-radius: .5rem;
-  border-top-right-radius: .5rem;
-}
-
-.badge-action {
-  cursor: pointer;
-}
-
-.chip {
-  font-size: .85rem;
-  padding: .25rem .6rem;
-  border-radius: 999px;
-  background: #eef2ff;
-}
+body { background:#f8f9fa; }
+.hero { background: linear-gradient(135deg, #ffffff 0%, #f1f5ff 100%); border-radius:.75rem; }
+.food-card img { height:160px; object-fit:cover; border-top-left-radius:.5rem; border-top-right-radius:.5rem; }
+.badge-action { cursor:pointer; }
+.chip { font-size:.85rem; padding: .25rem .6rem; border-radius: 999px; background: #eef2ff; }
