@@ -196,8 +196,41 @@ function claimItem(btn){
     }, 900);
   }
 }
+/**
+ * مدیریت فرم ورود کاربر (به‌روز شده برای استفاده از کد ملی)
+ */
+function handleLogin() {
+    // تغییر ID فیلد از loginEmail به loginNationalCode
+    const nationalCode = document.getElementById('loginNationalCode').value; 
+    const password = document.getElementById('loginPassword').value;
 
-// اجرای اولیه فیلتر و مرتب سازی
+    console.log('Attempting login for National Code:', nationalCode);
+
+    const modalEl = document.getElementById('authModal');
+    const bsModal = bootstrap.Modal.getInstance(modalEl);
+    bsModal.hide();
+    
+    alert(`خوش آمدید، ورود با کد ملی ${nationalCode} موفقیت آمیز بود. (در آینده به سرور متصل شود)`);
+}
+
+/**
+ * مدیریت فرم ثبت نام کاربر (به‌روز شده برای استفاده از کد ملی)
+ */
+function handleRegister() {
+    const name = document.getElementById('registerName').value;
+    // تغییر ID فیلد از registerEmail به registerNationalCode
+    const nationalCode = document.getElementById('registerNationalCode').value; 
+    const password = document.getElementById('registerPassword').value;
+    
+    console.log('Attempting register for:', name, 'National Code:', nationalCode);
+
+    const modalEl = document.getElementById('authModal');
+    const bsModal = bootstrap.Modal.getInstance(modalEl);
+    bsModal.hide();
+
+    alert(`کاربر ${name} عزیز، ثبت‌نام شما با کد ملی ${nationalCode} انجام شد. (در آینده به سرور متصل شود)`);
+}
+// ... بقیه توابع شما (filterCards, sortCards, submitPost و ...) باید در این فایل حفظ شوند.
 document.addEventListener('DOMContentLoaded', () => {
   filterCards();
 });
