@@ -7,6 +7,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.rtl.min.css" rel="stylesheet" integrity="" crossorigin="anonymous">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
@@ -14,35 +16,35 @@
 <body class="p-0">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <i class="bi bi-basket2-fill fs-4 text-primary me-2"></i>
-                <span class="fw-bold">بازسلف</span>
-            </a>
+    <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#
+            <i class="bi bi-basket2-fill fs-4 text-primary me-2"></i>
+            
+        </a>
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse" id="navMain">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#">صفحه‌اصلی</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">دسته‌ها</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">قوانین</a></li>
-                </ul>
+        <div class="collapse navbar-collapse" id="navMain">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">صفحه‌اصلی</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">دسته‌ها</a></li>
+                <li class="nav-item"><a class="nav-link" href="tamasbama/index.html">تماس با ما</a></li>
+            </ul>
 
-                <form class="d-flex ms-3" role="search" onsubmit="event.preventDefault(); filterCards();">
-                    <input id="searchInput" class="form-control me-2" type="search" placeholder="جستجوی غذا، نام صاحب، توضیحات..." aria-label="Search" onkeyup="filterCards()">
-                </form>
+            <form class="d-flex ms-3" role="search" onsubmit="event.preventDefault(); filterCards();">
+                <input id="searchInput" class="form-control me-2" type="search" placeholder="جستجوی غذا، نام صاحب، توضیحات..." aria-label="Search" onkeyup="filterCards()">
+            </form>
 
-                <div class="d-flex align-items-center">
-                    <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#postModal"><i class="bi bi-plus-lg"></i> ثبت آگهی</button>
-                    <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#authModal">ورود / ثبت‌نام</button>
-                </div>
+            <div class="my-1"></div> 
+            <div class="d-flex align-items-center">
+                <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#postModal"><i class="bi bi-plus-lg"></i> ثبت آگهی</button>
+                <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#authModal">ورود / ثبت‌نام</button>
             </div>
         </div>
-    </nav>
-
+    </div>
+</nav>
     <header class="container my-4">
         <div class="p-4 hero shadow-sm">
             <div class="row align-items-center">
@@ -70,8 +72,9 @@
     </div>
 </div>
                 <div class="col-lg-5 text-center d-none d-lg-block">
-                    <img src="https://images.unsplash.com/photo-1604908177522-0c4f5b8be0c0?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="food" class="img-fluid rounded" style="max-height:220px; object-fit:cover;">
-                </div>
+                   
+
+
             </div>
         </div>
     </header>
@@ -87,9 +90,9 @@
                             <select id="priceFilter" class="form-select" onchange="filterCards()">
                                 <option value="">همه</option>
                                 <option value="0-0">رایگان</option>
-                                <option value="1-20">زیر ۲۰ هزار</option>
-                                <option value="20-50">۲۰ تا ۵۰</option>
-                                <option value="50+">بیشتر از ۵۰</option>
+                                <option value="1-20"> 17 هزار</option>
+                                <option value="20-50">22 هزار </option>
+                              
                             </select>
                         </div>
 
@@ -119,13 +122,13 @@
                 <div class="row g-3" id="cardsContainer">
                     <div class="col-md-6 col-lg-4">
                         <div class="card food-card h-100" data-type="sell" data-price="30" data-created="2025-10-30">
-                            <img src="https://images.unsplash.com/photo-1605475126911-0b48e6f84a7f?q=80&w=800&auto=format&fit=crop&s=placeholder" class="card-img-top" alt="خورشت قیمه">
+                            <img src="img/ghme.png" class="card-img-top" alt="خورشت قیمه">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">خورشت قیمه — ۱ پرس</h5>
-                                <p class="card-text text-muted small">صاحب: علی — آمادهٔ تحویل در ۳۰ مهر</p>
+                                <h5 class="card-title">خورشت قیمه _ ۱ پرس</h5>
+                                <p class="card-text text-muted small">صاحب: هانیا بردویی </p>
                                 <div class="mt-auto d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="fw-bold">۳۰,۰۰۰ تومان</span>
+                                        <span class="fw-bold">17,000 تومان</span>
                                         <div class="small text-muted">برای فروش</div>
                                     </div>
                                     <div class="btn-group">
@@ -139,14 +142,14 @@
 
                     <div class="col-md-6 col-lg-4">
                         <div class="card food-card h-100" data-type="free" data-price="0" data-created="2025-10-31">
-                            <img src="https://images.unsplash.com/photo-1543353071-087092ec393a?q=80&w=800&auto=format&fit=crop&s=placeholder" class="card-img-top" alt="سالاد">
+                            <img src="img/zirishkpoloo.webp" class="card-img-top" alt="سالاد">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">سالاد فصل — ۲ بسته</h5>
-                                <p class="card-text text-muted small">صاحب: سارا</p>
+                                <h5 class="card-title"> زرشک پلو با مرغ _ 1 پرس</h5>
+                                <p class="card-text text-muted small">صاحب:سارا عاشقی</p>
                                 <div class="mt-auto d-flex justify-content-between align-items-center">
                                     <div>
                                         <span class="fw-bold">رایگان</span>
-                                        <div class="small text-muted">اهدایی</div>
+                                        
                                     </div>
                                     <div class="btn-group">
                                         <button class="btn btn-outline-primary btn-sm" onclick="openChat('سارا')"><i class="bi bi-chat-dots"></i></button>
@@ -159,13 +162,13 @@
 
                     <div class="col-md-6 col-lg-4">
                         <div class="card food-card h-100" data-type="sell" data-price="15" data-created="2025-10-29">
-                            <img src="https://images.unsplash.com/photo-1604908177540-2f0b1d6b9f5c?q=80&w=800&auto=format&fit=crop&s=placeholder" class="card-img-top" alt="کتلت">
+                            <img src="img/sefenjoon.webp" class="card-img-top" alt="کتلت">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">کتلت و برنج — ۱ پرس</h5>
-                                <p class="card-text text-muted small">صاحب: مهدی</p>
+                                <h5 class="card-title">فسنجان _ 1 پرس</h5>
+                                <p class="card-text text-muted small">صاحب: رها جان زمین</p>
                                 <div class="mt-auto d-flex justify-content-between align-items-center">
                                     <div>
-                                        <span class="fw-bold">۱۵,۰۰۰ تومان</span>
+                                        <span class="fw-bold">22,000 تومان</span>
                                         <div class="small text-muted">فروش فوری</div>
                                     </div>
                                     <div class="btn-group">
@@ -188,7 +191,7 @@
 
     <footer class="bg-white border-top py-3">
         <div class="container d-flex justify-content-between">
-            <div class="small text-muted">© دانشگاه — بازسلف</div>
+            <div class="small text-muted">© دانشگاه — سفره مشترک</div>
             <div class="small">
                 <a href="#" class="text-decoration-none me-3">قوانین</a>
                 <a href="#" class="text-decoration-none">تماس</a>
@@ -219,30 +222,34 @@
                                 </select>
                             </div>
 
-                            <div class="col-12">
-                                <label class="form-label">توضیحات</label>
-                                <textarea id="postDesc" class="form-control" rows="3"></textarea>
-                            </div>
-
+                           
                             <div class="col-md-4">
                                 <label class="form-label">قیمت (تومان)</label>
                                 <input id="postPrice" class="form-control" type="number" min="0" value="0">
                             </div>
 
                             <div class="col-md-4">
-                                <label class="form-label">تعداد</label>
-                                <input id="postQty" class="form-control" type="number" min="1" value="1">
-                            </div>
+    <label for="postDate" class="form-label">تاریخ</label>
+    
+    <input id="postDate" class="form-control" type="date">
+</div>
 
                             <div class="col-md-4">
-                                <label class="form-label">تحویل / محل</label>
-                                <input id="postPickup" class="form-control" placeholder="نمون: سلف/درِ خوابگاه">
-                            </div>
+    <label for="postPickup" class="form-label">سلف‌های مجاز</label>
+    
+    <select id="postPickup" class="form-select" aria-label="انتخاب سلف">
+        <option selected disabled value="">سلف مورد نظر خود را انتخاب کنید</option>
+        
+        <option value="شهرک قدس قم">شهرک قدس قم</option>
+        <option value="پردیسان قم دختران">پردیسان قم دختران</option>
+    </select>
+    
+    </div>
 
                             <div class="col-12">
                                 <label class="form-label">تصویر (URL)</label>
                                 <input id="postImage" class="form-control" placeholder="https://...">
-                                <div class="form-text">برای نمونه از تصاویر آنلاین استفاده کن یا بعداً آپلود عکس اضافه کن.</div>
+                                <div class="form-text">   </div>
                             </div>
                         </div>
                     </div>
@@ -325,6 +332,6 @@
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
