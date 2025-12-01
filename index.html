@@ -12,13 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="panel karbari/karbari.css"
+    
 </head>
 <body class="p-0">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center" href="#
-            <i class="bi bi-basket2-fill fs-4 text-primary me-2"></i>
+            <i class="bi bi-basket2-fill fs-4 text-primary me-2></a>"></i>
             
         </a>
 
@@ -37,14 +39,18 @@
                 <input id="searchInput" class="form-control me-2" type="search" placeholder="جستجوی غذا، نام صاحب، توضیحات..." aria-label="Search" onkeyup="filterCards()">
             </form>
 
-            <div class="my-1"></div> 
+  <div class="my-1"></div> 
             <div class="d-flex align-items-center">
+                <a href="user-panel.html" class="btn btn-outline-secondary btn-sm me-2">
+                    <i class="bi bi-person-circle"></i> پنل کاربری
+                </a>
                 <button class="btn btn-outline-primary btn-sm me-2" data-bs-toggle="modal" data-bs-target="#postModal"><i class="bi bi-plus-lg"></i> ثبت آگهی</button>
                 <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#authModal">ورود / ثبت‌نام</button>
             </div>
         </div>
     </div>
 </nav>
+
     <header class="container my-4">
         <div class="p-4 hero shadow-sm">
             <div class="row align-items-center">
@@ -153,7 +159,7 @@
                                     </div>
                                     <div class="btn-group">
                                         <button class="btn btn-outline-primary btn-sm" onclick="openChat('سارا')"><i class="bi bi-chat-dots"></i></button>
-                                        <button class="btn btn-success btn-sm" onclick="claimItem(this)" data-action="claim">ادخال</button>
+                                        <button class="btn btn-success btn-sm" onclick="claimItem(this)" data-action="claim">خرید</button>
                                     </div>
                                 </div>
                             </div>
@@ -172,7 +178,7 @@
                                         <div class="small text-muted">فروش فوری</div>
                                     </div>
                                     <div class="btn-group">
-                                        <button class="btn btn-outline-primary btn-sm" onclick="openChat('مهدی')"><i class="bi bi-chat-dots"></i></button>
+                                        <button class="btn btn-outline-primary btn-sm" onclick="openChat('سارا')"><i class="bi bi-chat-dots"></i></button>
                                         <button class="btn btn-primary btn-sm" onclick="claimItem(this)" data-action="buy">خرید</button>
                                     </div>
                                 </div>
@@ -287,8 +293,8 @@
                     <div class="tab-pane fade show active" id="login-panel" role="tabpanel" aria-labelledby="login-tab">
                         <form onsubmit="event.preventDefault(); handleLogin();">
                             <div class="mb-3">
-                                <label for="loginNationalCode" class="form-label small">کد ملی</label>
-                                <input type="text" class="form-control" id="loginNationalCode" placeholder="کد ملی ده رقمی خود را وارد کنید" required 
+                                <label for="loginNationalCode" class="form-label small">شماره تماس</label>
+                                <input type="text" class="form-control" id="loginNationalCode" placeholder=" شماره تماس خود را وارد کنید" required 
                                        inputmode="numeric" pattern="\d{10}" maxlength="10">
                             </div>
                             <div class="mb-3">
@@ -299,7 +305,7 @@
                                 <button type="submit" class="btn btn-primary">ورود</button>
                             </div>
                             <div class="text-center small">
-                                <a href="#" class="text-decoration-none" onclick="alert('لینک بازیابی رمز عبور فعال شود')">رمز عبور را فراموش کرده‌ام</a>
+                                <a href="faramoshi.html" class="text-decoration-none" >رمز عبور را فراموش کرده‌ام</a>
                             </div>
                         </form>
                     </div>
@@ -333,5 +339,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    
+    </body>
+</html>
 </body>
 </html>

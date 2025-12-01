@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fa">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>بازیابی رمز عبور</title>
+
+  <style>
+    :root{
+      --blue-500: #0b75d1;
+      --blue-600: #0a6cc0;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --page-bg: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+      --radius: 14px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: "Vazirmatn", "Tahoma", sans-serif;
+      background: var(--page-bg);
+      direction: rtl;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .container{width:100%;max-width:420px;}
+
+    .card{
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding:28px;
+      text-align:center;
+      box-shadow: 0 10px 30px rgba(11, 60, 120, 0.08);
+      border: 1px solid rgba(10, 50, 100, 0.06);
+    }
+
+    .icon-wrap{
+      width:84px;
+      height:84px;
+      margin:0 auto 10px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background: linear-gradient(135deg, rgba(11,117,209,0.12), rgba(10,108,192,0.06));
+      border-radius:18px;
+    }
+    .lock{color:var(--blue-600);}
+
+    .title{margin:6px 0 4px;font-size:20px;font-weight:700;color:#0f1724;}
+    .subtitle{margin:0 0 18px;color:var(--muted);font-size:13px;}
+
+    .form{text-align:right;}
+
+    .field{margin-bottom:14px;}
+    .field-title{font-size:13px;color:var(--muted);margin-bottom:8px;display:block;}
+
+    input[type="text"]{
+      width:100%;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid rgba(15,23,36,0.06);
+      font-size:15px;
+      background:#fbfdff;
+      transition:.18s;
+    }
+    input[type="text"]:focus{
+      box-shadow:0 6px 20px rgba(11,117,209,0.08);
+      border-color:var(--blue-500);
+      outline:none;
+    }
+
+    .btn{
+      width:100%;padding:12px 14px;border-radius:10px;
+      font-weight:700;font-size:15px;border:none;color:white;
+      background:linear-gradient(90deg,var(--blue-500),var(--blue-600));
+      box-shadow:0 6px 18px rgba(11,117,209,0.14);
+      cursor:pointer;transition:.12s;
+    }
+    .btn:active{transform:translateY(1px);}
+    .btn[disabled]{opacity:.7;cursor:not-allowed;box-shadow:none;}
+
+    .hint-row{
+      margin-top:12px;font-size:13px;color:var(--muted);
+      display:flex;gap:8px;justify-content:center;align-items:center;
+    }
+    .link{color:var(--blue-600);text-decoration:none;font-weight:600;}
+
+    .error{
+      color:#b00020;font-size:13px;margin-top:8px;min-height:18px;
+    }
+
+    .message{
+      margin-top:12px;font-size:14px;color:#064e2a;
+      background:#f0fdf4;border:1px solid rgba(4,120,87,0.08);
+      padding:10px 12px;border-radius:8px;display:none;
+    }
+
+    @media(max-width:420px){
+      .card{padding:20px}
+      .icon-wrap{width:72px;height:72px}
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card">
+
+      <div class="icon-wrap">
+        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" class="lock">
+          <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M7 11V8a5 5 0 0110 0v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <h1 class="title">بازیابی رمز عبور</h1>
+      <p class="subtitle">ایمیل یا نام کاربری‌ت رو وارد کن.</p>
+
+      <form id="forgotForm" class="form" novalidate>
+        <label class="field">
+          <span class="field-title">نام کاربری یا ایمیل</span>
+          <input id="userInput" type="text" required placeholder="username یا email" />
+          <div id="error" class="error"></div>
+        </label>
+
+        <button type="submit" id="submitBtn" class="btn">ارسال لینک بازیابی</button>
+
+        <div class="hint-row">
+          <a href="/login" class="link">بازگشت</a>
+        </div>
+
+        <div id="message" class="message"></div>
+      </form>
+
+    </section>
+  </main>
+
+  <script>
+    // لینک مقصدی که میخوای کاربر بهش منتقل بشه
+    const FORGOT_LINK = "/reset-password";
+
+    const form = document.getElementById("forgotForm");
+    const input = document.getElementById("userInput");
+    const error = document.getElementById("error");
+    const msg = document.getElementById("message");
+    const btn = document.getElementById("submitBtn");
+
+    form.addEventListener("submit", (e)=>{
+      e.preventDefault();
+      error.textContent = "";
+      msg.style.display = "none";
+
+      const value = input.value.trim();
+      if(!value){
+        error.textContent = "لطفاً ایمیل یا نام کاربری را وارد کن.";
+        return;
+      }
+
+      btn.disabled = true;
+      btn.textContent = "در حال ارسال...";
+
+      // هدایت به لینک بازیابی
+      const redirectUrl = FORGOT_LINK + "?user=" + encodeURIComponent(value);
+      setTimeout(()=>{
+        window.location.href = redirectUrl;
+      }, 500);
+    });
+  </script>
+</body>
+</html>
